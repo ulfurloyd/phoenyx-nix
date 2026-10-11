@@ -3,6 +3,7 @@
     imports =
       [
         self.nixosModules.hermesHardware
+	self.nixosModules.myHomeManager
       ];
 
     nix.settings.experimental-features = [ "nix-command" "flakes" ];
@@ -75,6 +76,8 @@
       git
       wget
     ];
+
+    home-manager.users.wolf = self.homeModules.wolf;
   
     system.stateVersion = "26.05";
   };

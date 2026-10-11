@@ -1,0 +1,22 @@
+{ self, inputs, ... }: {
+  flake.homeConfigurations.wolf = inputs.home-manager.lib.homeManager.Configuration {
+    pkgs = import inputs.nixpkgs {
+      system = "x86_64-linux";
+      config.allowUnfree = true;
+    };
+
+    modules = [
+      self.homeModules.wolf {
+       home.username = "wolf";
+       home.homeDirectory = "/home/wolf";
+      }
+    ];
+  };
+
+  flake.homeModules.wolf = { pkgs, ... }: {
+    programs.bash.enable = true;
+    programs.git.enable = true;
+
+    home.stateVersion = "26.05";
+  };
+}
