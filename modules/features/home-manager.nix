@@ -7,7 +7,7 @@
 
     home-manager = {
       useGlobalPkgs = true;
-      userUserPackages = true;
+      useUserPackages = true;
     };
   };
 
