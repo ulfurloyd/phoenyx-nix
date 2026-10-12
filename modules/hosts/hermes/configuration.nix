@@ -3,7 +3,6 @@
     imports =
       [
         self.nixosModules.hermesHardware
-	self.nixosModules.myHomeManager
       ];
 
     nix.settings.experimental-features = [ "nix-command" "flakes" ];

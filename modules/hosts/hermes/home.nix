@@ -1,5 +1,5 @@
 { self, inputs, ... }: {
-  flake.homeConfigurations.wolf = inputs.home-manager.lib.homeManager.Configuration {
+  flake.homeConfigurations.wolf = inputs.home-manager.lib.homeManagerConfiguration {
     pkgs = import inputs.nixpkgs {
       system = "x86_64-linux";
       config.allowUnfree = true;
