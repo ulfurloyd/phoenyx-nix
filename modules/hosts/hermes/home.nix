@@ -14,8 +14,22 @@
   };
 
   flake.homeModules.wolf = { pkgs, ... }: {
+    imports = [
+      inputs.umbriel.homeModules.default
+    ];
+
     programs.bash.enable = true;
     programs.git.enable = true;
+    programs.umbriel = {
+      enable = true;
+      settings = {
+        general.autostart = [ "noctalia" ];
+        layout.gap = 2;
+        keybinds = {
+          "Mod+Return" = "spawn:konsole";
+        };
+      };
+    };
 
     home.stateVersion = "26.05";
   };

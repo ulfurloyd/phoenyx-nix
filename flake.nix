@@ -10,6 +10,13 @@
     };
 
     wrapper-modules.url = "github:BirdeeHub/nix-wrapper-modules";
+
+    umbriel.url = "github:noctalia-dev/umbriel";
+
+    helium = {
+      url = "github:schembriaiden/helium-browser-nix-flake";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = inputs: inputs.flake-parts.lib.mkFlake {inherit inputs;} (inputs.import-tree ./modules);
