@@ -18,6 +18,7 @@
       self.homeModules.umbriel
       self.homeModules.noctalia
       self.homeModules.kitty
+      self.homeModules.vesktop
     ];
 
     home.packages = with pkgs; [

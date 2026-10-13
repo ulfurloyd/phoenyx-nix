@@ -73,6 +73,10 @@
         "alt+y>=" = "set_background_opacity +0.2";
         "alt+y>-" = "set_background_opacity -0.2";
       };
+
+      extraConfig = ''
+        include themes/noctalia.conf
+      '';
     };
   };
 }

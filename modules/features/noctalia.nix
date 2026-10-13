@@ -62,6 +62,23 @@
         theme = {
 	  mode = "dark";
 	  source = "wallpaper";
+	  wallpaper_scheme = "m3-content";
+
+	  templates = {
+	    community_ids = [
+	      "pywalfox"
+	      "zen-browser"
+	      "discord"
+	      "gimp"
+	      "neovim"
+	      "fastfetch"
+	      "zathura"
+	      "zellij"
+	      "bat"
+	      "lazygit"
+	      "yazi"
+	    ];
+	  };
 	};
 	bar = {
 	  primary = {

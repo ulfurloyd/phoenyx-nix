@@ -204,6 +204,8 @@
 	];
 
 	workspaces.back_and_forth = true;
+
+	include.optional.files = [ "noctalia.toml" ];
       };
     };
   };
