@@ -7,6 +7,7 @@
       self.nixosModules.umbriel
       self.nixosModules.noctalia
       self.nixosModules.keyd
+      self.nixosModules.flyline
     ];
   };
 }
