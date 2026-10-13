@@ -18,6 +18,10 @@
       self.homeModules.umbriel
     ];
 
+    home.packages = with pkgs; [
+      inputs.helium.packages.${system}.default
+    ];
+
     programs.bash.enable = true;
     programs.git.enable = true;
 
