@@ -3,7 +3,6 @@
     imports =
       [
         self.nixosModules.hermesHardware
-        inputs.umbriel.nixosModules.default
       ];
 
     nix.settings.experimental-features = [ "nix-command" "flakes" ];
@@ -32,9 +31,6 @@
       LC_TELEPHONE = "en_IN";
       LC_TIME = "en_IN";
     };
-
-    # umbriel
-    programs.umbriel.enable = true;
 
     # kde
     services.xserver.enable = true;

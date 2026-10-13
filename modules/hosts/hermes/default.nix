@@ -4,6 +4,7 @@
     modules = [
       self.nixosModules.hermesConfiguration
       self.nixosModules.myHomeManager
+      self.nixosModules.umbriel
     ];
   };
 }
