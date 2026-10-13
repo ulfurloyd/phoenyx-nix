@@ -74,6 +74,7 @@
       neovim
       git
       wget
+      xwayland-satellite
     ];
 
     home-manager.users.wolf = self.homeModules.wolf;
