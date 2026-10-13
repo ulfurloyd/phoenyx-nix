@@ -11,6 +11,7 @@
 
     wrapper-modules.url = "github:BirdeeHub/nix-wrapper-modules";
 
+    noctalia.url = "github:noctalia-dev/noctalia";
     umbriel.url = "github:noctalia-dev/umbriel";
 
     helium = {
@@ -20,4 +21,13 @@
   };
 
   outputs = inputs: inputs.flake-parts.lib.mkFlake {inherit inputs;} (inputs.import-tree ./modules);
+
+  nixConfig = {
+    extra-substituters = [
+      "https://noctalia.cachix.org"
+    ];
+    extra-trusted-public-keys = [
+      "noctalia.cachix.org-1:pCOR47nnMEo5thcxNDtzWpOxNFQsBRglJzxWPp3dkU4="
+    ];
+  };
 }

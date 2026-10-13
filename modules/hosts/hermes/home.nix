@@ -16,6 +16,7 @@
   flake.homeModules.wolf = { pkgs, ... }: {
     imports = [
       self.homeModules.umbriel
+      self.homeModules.noctalia
     ];
 
     home.packages = with pkgs; [
