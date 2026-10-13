@@ -28,11 +28,17 @@
 	};
 
 	layout = {
-          gap = 2;
+	  mode = "scrolling";
+          gap = 10;
+	  extent_presets = [ 0.333 0.5 0.667 ];
+	  scrolling = {
+	    default_extent_fraction = 0.5;
+	    center_underfull_strip = true;
+	  };
 	};
 
 	keybinds = {
-	  "Mod+Return" = "spawn:konsole";
+	  "Mod+Return" = "spawn:kitty";
 	  "Mod+T" = "window-toggle-floating";
 	  "Mod+R" = "window-cycle-primary-extent";
 	  "Mod+F" = "window-toggle-maximize";
@@ -109,6 +115,95 @@
           "Mod+Shift+F12" = "spawn:noctalia msg screenshot-fullscreen";
           "Mod+Ctrl+F12" = "spawn:noctalia msg plugin noctalia/screen_recorder:service all toggle";
 	};
+        
+	appearance = {
+	  prefer_no_csd = true;
+	  border_width = 1;
+	  outer_border_width = 0;
+	  corner_radius = 5;
+	  blur = {
+	    enabled = true;
+	    optimized = true;
+	    passes = 3;
+	    radius = 3;
+	    noise = 0.02;
+	    brightness = 0.9;
+	    contrast = 0.9;
+	    saturation = 1.1;
+	  };
+	  shadow = {
+	    enabled = true;
+	    softness = 10;
+	    offset_x = 2;
+	    offset_y = 2;
+	  };
+	};
+
+	environment.QT_QPA_PLATFORMTHEME = "qt6ct";
+
+	input = {
+	  keyboard.repeat_rate = 25;
+	  keyboard.repeat_delay = 600;
+
+	  touchpad.tap = true;
+	  touchpad.natural_scroll = true;
+
+	  mouse = {
+	    natural_scroll = false;
+	    accel_profile = "flat";
+	    sensitivity = 0.0;
+	    scroll_wheel_step = 60;
+	  };
+
+	  cursor = {
+	    size = 24;
+	    follows_focus = true;
+	    hardware_cursor = true;
+	    hide_when_typing = false;
+	    hide_timeout_ms = 0;
+	  };
+
+	  focus.follows_mouse = true;
+	  focus.follows_mouse_max_scroll = 0.5;
+	};
+
+	overview.zoom = 0.5;
+
+        hot_corners.top_left = {
+	  enabled = true;
+	  delay_ms = 500;
+	  action = "overview-open";
+	};
+
+	window_rule = [
+	  {
+	    blur = true;
+	    blur_optimized = true;
+	  }
+	  {
+	    match.app_id = "^dev.noctalia.Noctalia$";
+	    default_floating = false;
+	  }
+	  {
+	    match.app_id = "^dev.noctalia.UmbrielSharePicker$";
+	    default_floating = true;
+	    default_floating_size_px = {
+	      width = 800;
+	      height = 600;
+	    };
+	  }
+	];
+
+	layer_rule = [
+	  {
+	    match.namespace = "^noctalia-(bar-[^\"]+|notification|dock|panel|attached-panel|osd|desktop-widget-[^\"]*)$";
+	    blur = true;
+	    blur_ignore_alpha = 0.4;
+	    blur_popups = true;
+	  }
+	];
+
+	workspaces.back_and_forth = true;
       };
     };
   };

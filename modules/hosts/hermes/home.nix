@@ -17,6 +17,7 @@
     imports = [
       self.homeModules.umbriel
       self.homeModules.noctalia
+      self.homeModules.kitty
     ];
 
     home.packages = with pkgs; [
