@@ -104,6 +104,10 @@
           "XF86AudioPrev" = "spawn:playerctl -p %any previous";
           "XF86AudioNext" = "spawn:playerctl -p %any next";
 
+          # screen brightness
+          "XF86MonBrightnessUp" = "spawn:noctalia msg brightness-up";
+          "XF86MonBrightnessDown" = "spawn:noctalia msg brightness-down";
+
           # noctalia
           "Mod+Alt+S" = "spawn:noctalia msg settings-toggle";
           "Mod+D" = "spawn:noctalia msg panel-toggle control-center";
