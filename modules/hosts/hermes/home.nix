@@ -23,6 +23,7 @@
       self.homeModules.vesktop
       self.homeModules.nvim
       self.homeModules.lazygit
+      self.homeModules.zellij
     ];
 
     home.packages = with pkgs; [
