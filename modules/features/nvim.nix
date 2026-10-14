@@ -207,6 +207,30 @@
             action = "<cmd>lua Snacks.lazygit.log()<CR>";
             desc = "Snacks LazyGit log";
           }
+          {
+            key = "<c-h>";
+            mode = "n";
+            action = "<cmd>ZellijNavigateLeftTab<cr>";
+            desc = "navigate left or tab";
+          }
+          {
+            key = "<c-j>";
+            mode = "n";
+            action = "<cmd>ZellijNavigateDown<cr>";
+            desc = "navigate down";
+          }
+          {
+            key = "<c-k>";
+            mode = "n";
+            action = "<cmd>ZellijNavigateUp<cr>";
+            desc = "navigate up";
+          }
+          {
+            key = "<c-l>";
+            mode = "n";
+            action = "<cmd>ZellijNavigateRightTab<cr>";
+            desc = "navigate right or tab";
+          }
         ];
 
         globals = {
@@ -261,11 +285,16 @@
           oil-nvim
           mini-icons
           base16-nvim
+          zellij-nav-nvim
         ];
 
         luaConfigRC.oil = ''
           require("mini.icons").setup({})
           require("oil").setup({})
+        '';
+
+        luaConfigRC.zellij-nav = ''
+          require("zellij-nav").setup({})
         '';
 
         luaConfigRC.matugen = ''
