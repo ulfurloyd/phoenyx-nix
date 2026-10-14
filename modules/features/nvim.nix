@@ -22,7 +22,14 @@
 
         theme.enable = false;
 
-        ui.colorizer.enable = true;
+        ui = {
+          colorizer.enable = true;
+          noice.enable = true;
+        };
+
+        statusline.lualine.enable = true;
+
+        binds.whichKey.enable = true;
 
         options = {
           termguicolors = true;
