@@ -8,6 +8,7 @@
       self.nixosModules.noctalia
       self.nixosModules.keyd
       self.nixosModules.flyline
+	  self.nixosModules.fonts
     ];
   };
 }

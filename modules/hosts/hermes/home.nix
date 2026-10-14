@@ -20,6 +20,7 @@
       self.homeModules.noctalia
       self.homeModules.kitty
       self.homeModules.vesktop
+      self.homeModules.nvim
     ];
 
     home.packages = with pkgs; [
