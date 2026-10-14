@@ -275,30 +275,46 @@
         languages = {
           enableTreesitter = true;
 
-          toml.enable = true;
           bash.enable = true;
-          markdown.enable = true;
           clang.enable = true;
+          docker.enable = true;
           go.enable = true;
-          python.enable = true;
+          json.enable = true;
           lua.enable = true;
+          markdown.enable = true;
+          nix.enable = true;
+          python.enable = true;
+          toml.enable = true;
+          yaml.enable = true;
         };
 
         formatter.conform-nvim = {
           enable = true;
           setupOpts = {
             formatters_by_ft = {
-              lua = [ "stylua" ];
               bash = [ "shfmt" ];
+              c = [ "clang-format" ];
+              cpp = [ "clang-format" ];
               go = [ "gofmt" ];
+              json = [ "prettier" ];
+              jsonc = [ "prettier" ];
+              lua = [ "stylua" ];
+              markdown = [ "prettier" ];
               nix = [ "nixfmt" ];
+              sh = [ "shfmt" ];
+              toml = [ "taplo" ];
+              yaml = [ "prettier" ];
             };
           };
           presets = {
-            stylua.enable = true;
-            shfmt.enable = true;
+            clang-format.enable = true;
             gofmt.enable = true;
             nixfmt.enable = true;
+            prettier.enable = true;
+            ruff.enable = true;
+            shfmt.enable = true;
+            stylua.enable = true;
+            taplo.enable = true;
           };
         };
 
