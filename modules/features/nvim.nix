@@ -111,6 +111,12 @@
 	    	action = "<cmd>Lazy<CR>";
 	    	desc = "Nvim: Lazy";
 	      }
+		  {
+		    key = "<leader>cf";
+			mode = "n";
+			action = "<cmd>lua require('conform').format()<CR>";
+			desc = "Code: Format file";
+		  }
 	    ];
 
 	    globals = {
@@ -123,6 +129,24 @@
 	      enable = true;
 	      providers.wl-copy.enable = true;
 	    };
+
+		formatter.conform-nvim = {
+		  enable = true;
+		  setupOpts = {
+		    formatters_by_ft = {
+			  lua = [ "stylua" ];
+			  bash = [ "shfmt" ];
+			  go = [ "gofmt" ];
+			  nix = [ "nixfmt" ];
+			};
+		  };
+		  presets = {
+		    stylua.enable = true;
+		    shfmt.enable = true;
+		    gofmt.enable = true;
+		    nixfmt.enable = true;
+		  };
+		};
 
 		startPlugins = with pkgs.vimPlugins; [
 		  oil-nvim
