@@ -117,6 +117,54 @@
             action = "<cmd>lua require('conform').format()<CR>";
             desc = "Code: Format file";
           }
+          {
+            key = "<leader><leader>";
+            mode = "n";
+            action = "<cmd>FzfLua buffers<CR>";
+            desc = "List Open Buffers";
+          }
+          {
+            key = "<leader>sf";
+            mode = "n";
+            action = "<cmd>FzfLua files<CR>";
+            desc = "Search Files";
+          }
+          {
+            key = "<leader>sg";
+            mode = "n";
+            action = "<cmd>FzfLua live_grep keymap.fzf.ctrl-q=select-all+accept actions.ctrl-q=false<CR>";
+            desc = "Search by Grep";
+          }
+          {
+            key = "<leader>sw";
+            mode = "n";
+            action = "<cmd>FzfLua lgrep_curbuf<CR>";
+            desc = "List Open Buffers";
+          }
+          {
+            key = "<leader>sr";
+            mode = "n";
+            action = "<cmd>FzfLua oldfiles<CR>";
+            desc = "Search Recent Files";
+          }
+          {
+            key = "<leader>sh";
+            mode = "n";
+            action = "<cmd>FzfLua helptags<CR>";
+            desc = "Search Help Tags";
+          }
+          {
+            key = "<leader>st";
+            mode = "n";
+            action = "<cmd>FzfLua tabs<CR>";
+            desc = "Search Tabs";
+          }
+          {
+            key = "<leader>sb";
+            mode = "n";
+            action = "<cmd>FzfLua builtin<CR>";
+            desc = "Search Fzf Builtins";
+          }
         ];
 
         globals = {
@@ -128,6 +176,25 @@
         clipboard = {
           enable = true;
           providers.wl-copy.enable = true;
+        };
+
+        fzf-lua.enable = true;
+
+        lsp = {
+          enable = true;
+          formatOnSave = true;
+        };
+
+        languages = {
+          enableTreesitter = true;
+
+          toml.enable = true;
+          bash.enable = true;
+          markdown.enable = true;
+          clang.enable = true;
+          go.enable = true;
+          python.enable = true;
+          lua.enable = true;
         };
 
         formatter.conform-nvim = {
