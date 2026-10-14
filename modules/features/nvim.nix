@@ -11,7 +11,18 @@
         viAlias = false;
         vimAlias = true;
 
+        withNodeJs = true;
+
+        mini = {
+          comment.enable = true;
+          pairs.enable = true;
+          tabline.enable = true;
+        };
+        git.enable = true;
+
         theme.enable = false;
+
+        ui.colorizer.enable = true;
 
         options = {
           termguicolors = true;
@@ -165,6 +176,30 @@
             action = "<cmd>FzfLua builtin<CR>";
             desc = "Search Fzf Builtins";
           }
+          {
+            key = "<leader>tm";
+            mode = "n";
+            action = "<cmd>MarkdownPreviewToggle<CR>";
+            desc = "Toggle Markdown Preview";
+          }
+          {
+            key = "\\";
+            mode = "n";
+            action = "<cmd>lua Snacks.explorer()<CR>";
+            desc = "Open Snacks explorer";
+          }
+          {
+            key = "<leader>gg";
+            mode = "n";
+            action = "<cmd>lua Snacks.lazygit()<CR>";
+            desc = "Snacks LazyGit";
+          }
+          {
+            key = "<leader>gl";
+            mode = "n";
+            action = "<cmd>lua Snacks.lazygit.log()<CR>";
+            desc = "Snacks LazyGit log";
+          }
         ];
 
         globals = {
@@ -231,6 +266,122 @@
           vim.opt.runtimepath:append(config)
           require("matugen").setup()
         '';
+
+        utility = {
+          preview.markdownPreview.enable = true;
+          snacks-nvim = {
+            enable = true;
+
+            setupOpts = {
+              bigfile.enabled = true;
+              dashboard = {
+                enabled = true;
+                width = 80;
+                sections = [
+                  {
+                    pane = 2;
+                    section = "header";
+                  }
+                  {
+                    section = "keys";
+                    gap = 1;
+                    padding = 1;
+                  }
+                  {
+                    icon = " ";
+                    title = "Recent Files";
+                    section = "recent_files";
+                    indent = 2;
+                    padding = [
+                      2
+                      2
+                    ];
+                  }
+                ];
+                preset = {
+                  header = ''
+                             ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄          
+                           ▄▀            ▄       ▀▄        
+                           █  ▄    ▄              █        
+                           █            ▄█▄▄  ▄   █ ▄▄▄    
+                    ▄▄▄▄▄  █      ▀    ▀█  ▀▄     █▀▀ ██   
+                    ██▄▀██▄█   ▄       ██    ▀▀▀▀▀    ██   
+                     ▀██▄▀██        ▀ ██▀             ▀██  
+                       ▀████ ▀    ▄   ██   ▄█    ▄ ▄█  ██  
+                          ▀█    ▄     ██    ▄   ▄  ▄   ██  
+                          ▄█▄           ▀▄  ▀▀▀▀▀▀▀▀  ▄▀   
+                         █▀▀█████████▀▀▀▀████████████▀     
+                         ████▀  ███▀      ▀███  ▀██▀       
+
+                  '';
+                  keys = [
+                    {
+                      icon = " ";
+                      key = "f";
+                      desc = "Find File";
+                      action = ":lua Snacks.dashboard.pick('files')";
+                    }
+                    {
+                      icon = " ";
+                      key = "n";
+                      desc = "New File";
+                      action = ":ene | startinsert";
+                    }
+                    {
+                      icon = " ";
+                      key = "g";
+                      desc = "Find Text";
+                      action = ":lua Snacks.dashboard.pick('live_grep')";
+                    }
+                    {
+                      icon = " ";
+                      key = "r";
+                      desc = "Recent Files";
+                      action = ":lua Snacks.dashboard.pick('oldfiles')";
+                    }
+                    {
+                      icon = " ";
+                      key = "c";
+                      desc = "Config";
+                      action = ":lua Snacks.dashboard.pick('files', {cdw = '~/.local/share/chezmoi/dot_config/nvim'})";
+                    }
+                    {
+                      icon = " ";
+                      key = "s";
+                      desc = "Restore Session";
+                      section = "session";
+                    }
+                    {
+                      icon = " ";
+                      key = "G";
+                      desc = "Lazygit";
+                      action = ":lua require('snacks').lazygit()";
+                    }
+                    {
+                      icon = " ";
+                      key = "q";
+                      desc = "Quit";
+                      action = ":qa";
+                    }
+                  ];
+                };
+              };
+              explorer.enabled = true;
+              indent.enabled = true;
+              input.enabled = true;
+              picker = {
+                enabled = true;
+                layout.cycle = false;
+              };
+              notifier.enabled = true;
+              quickfile.enabled = true;
+              scope.enabled = true;
+              scroll.enabled = true;
+              statuscolumn.enabled = true;
+              words.enabled = true;
+            };
+          };
+        };
       };
     };
   };

@@ -6,9 +6,10 @@
     };
 
     modules = [
-      self.homeModules.wolf {
-       home.username = "wolf";
-       home.homeDirectory = "/home/wolf";
+      self.homeModules.wolf
+      {
+        home.username = "wolf";
+        home.homeDirectory = "/home/wolf";
       }
     ];
   };
@@ -21,6 +22,7 @@
       self.homeModules.kitty
       self.homeModules.vesktop
       self.homeModules.nvim
+      self.homeModules.lazygit
     ];
 
     home.packages = with pkgs; [
