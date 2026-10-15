@@ -24,6 +24,7 @@
       self.homeModules.nvim
       self.homeModules.lazygit
       self.homeModules.zellij
+      self.homeModules.shell-aliases
     ];
 
     home.packages = with pkgs; [
