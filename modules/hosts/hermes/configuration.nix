@@ -1,25 +1,27 @@
-{ self, inputs, ...}: {
+{ self, inputs, ... }: {
   flake.nixosModules.hermesConfiguration = { pkgs, ... }: {
-    imports =
-      [
-        self.nixosModules.hermesHardware
-      ];
+    imports = [
+      self.nixosModules.hermesHardware
+    ];
 
-    nix.settings.experimental-features = [ "nix-command" "flakes" ];
-  
+    nix.settings.experimental-features = [
+      "nix-command"
+      "flakes"
+    ];
+
     # boot
     boot.loader.systemd-boot.enable = true;
     boot.loader.efi.canTouchEfiVariables = true;
     boot.kernelPackages = pkgs.linuxPackages_latest;
-  
+
     # networking
     networking.hostName = "hermes";
     networking.networkmanager.enable = true;
-  
+
     # locale and timezone
     time.timeZone = "Asia/Kolkata";
     i18n.defaultLocale = "en_US.UTF-8";
-  
+
     i18n.extraLocaleSettings = {
       LC_ADDRESS = "en_IN";
       LC_IDENTIFICATION = "en_IN";
@@ -36,15 +38,15 @@
     services.xserver.enable = true;
     services.displayManager.sddm.enable = true;
     services.desktopManager.plasma6.enable = true;
-  
+
     services.xserver.xkb = {
       layout = "us";
       variant = "";
     };
-  
+
     # printing
     services.printing.enable = true;
-  
+
     # audio
     services.pulseaudio.enable = false;
     security.rtkit.enable = true;
@@ -54,21 +56,24 @@
       alsa.support32Bit = true;
       pulse.enable = true;
     };
-  
+
     # user
     users.users."wolf" = {
       isNormalUser = true;
       description = "wolf";
-      extraGroups = [ "networkmanager" "wheel" ];
+      extraGroups = [
+        "networkmanager"
+        "wheel"
+      ];
       packages = with pkgs; [
         kdePackages.kate
       ];
     };
-  
+
     # packages
     programs.firefox.enable = true;
     nixpkgs.config.allowUnfree = true;
-  
+
     environment.systemPackages = with pkgs; [
       vim
       git
@@ -77,7 +82,7 @@
     ];
 
     home-manager.users.wolf = self.homeModules.wolf;
-  
+
     system.stateVersion = "26.05";
   };
 }
