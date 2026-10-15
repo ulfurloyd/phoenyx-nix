@@ -120,6 +120,7 @@
           screenshot = {
             directory = "/home/wolf/Pictures/Screenshots";
             filename_pattern = "%Y_%m-%d_%H:%M:%S";
+            confirm_region = true;
           };
           panel = {
             attach_session = true;
@@ -143,7 +144,7 @@
               variant = "default";
             }
             {
-              action = "suspend";
+              action = "lock_and_suspend";
               countdown_seconds = 5.0;
               enabled = true;
               shortcut = "u";
