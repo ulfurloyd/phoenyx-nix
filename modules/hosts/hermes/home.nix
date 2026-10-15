@@ -25,6 +25,7 @@
       self.homeModules.lazygit
       self.homeModules.zellij
       self.homeModules.shell-aliases
+      self.homeModules.languages
     ];
 
     home.packages = with pkgs; [
