@@ -31,6 +31,7 @@
       inputs.helium.packages.${system}.default
       ripgrep
       wl-clipboard
+      gpu-screen-recorder
     ];
 
     programs.bash.enable = true;
