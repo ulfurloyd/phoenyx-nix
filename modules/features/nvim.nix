@@ -242,6 +242,7 @@
         clipboard = {
           enable = true;
           providers.wl-copy.enable = true;
+          registers = "unnamedplus";
         };
 
         fzf-lua.enable = true;
