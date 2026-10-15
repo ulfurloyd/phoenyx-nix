@@ -29,6 +29,7 @@
 
     home.packages = with pkgs; [
       inputs.helium.packages.${system}.default
+      ripgrep
     ];
 
     programs.bash.enable = true;
