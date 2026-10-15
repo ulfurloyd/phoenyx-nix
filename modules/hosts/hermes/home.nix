@@ -32,6 +32,7 @@
       ripgrep
       wl-clipboard
       gpu-screen-recorder
+      mpv
     ];
 
     programs.bash.enable = true;
