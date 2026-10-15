@@ -30,6 +30,7 @@
     home.packages = with pkgs; [
       inputs.helium.packages.${system}.default
       ripgrep
+      wl-clipboard
     ];
 
     programs.bash.enable = true;
