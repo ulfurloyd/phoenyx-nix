@@ -29,7 +29,7 @@
     ];
 
     home.packages = with pkgs; [
-      inputs.helium.packages.${system}.default
+      helium
       ripgrep
       wl-clipboard
       gpu-screen-recorder
