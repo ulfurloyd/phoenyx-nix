@@ -34,6 +34,7 @@
       wl-clipboard
       gpu-screen-recorder
       mpv
+      tre-command
     ];
 
     programs.bash.enable = true;
