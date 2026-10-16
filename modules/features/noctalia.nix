@@ -113,6 +113,7 @@
         };
         shell = {
           umbriel_overview_type_to_launch_enabled = true;
+          greeter_sync.auto_sync = true;
           polkit_agent = true;
           settings_window_translucent = true;
           telemetry_enabled = false;
