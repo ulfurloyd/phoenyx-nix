@@ -34,6 +34,7 @@
       wl-clipboard
       gpu-screen-recorder
       mpv
+      mpvpaper
       tre-command
     ];
 
