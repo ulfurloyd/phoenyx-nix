@@ -4,6 +4,8 @@
       inputs.noctalia.nixosModules.default
     ];
 
+    xdg.configFile."noctalia/templates/sequences".source = ./templates/sequences;
+
     programs.noctalia = {
       enable = true;
       recommendedServices.enable = true;
@@ -86,6 +88,11 @@
               "lazygit"
               "yazi"
             ];
+            user.terminal-sequences = {
+              input_path = "~/.config/noctalia/templates/sequences";
+              output_path = "~/.cache/terminal-sequences";
+              post_hook = "tee /dev/pts/[0-9]* < ~/.cache/terminal-sequences";
+            };
           };
         };
         bar = {
