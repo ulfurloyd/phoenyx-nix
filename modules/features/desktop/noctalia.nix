@@ -4,8 +4,6 @@
       inputs.noctalia.nixosModules.default
     ];
 
-    xdg.configFile."noctalia/templates/sequences".source = ./templates/sequences;
-
     programs.noctalia = {
       enable = true;
       recommendedServices.enable = true;
@@ -16,6 +14,8 @@
     imports = [
       inputs.noctalia.homeModules.default
     ];
+
+    xdg.configFile."noctalia/templates/sequences".source = ./templates/sequences;
 
     programs.noctalia = {
       enable = true;
