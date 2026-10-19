@@ -36,6 +36,30 @@
         ];
       };
 
+      fileSystems."/media/movies" = {
+        device = "/dev/disk/by-uuid/4ecbdc2f-bbd3-42f0-b18d-27a01a89c386";
+        fsType = "btrfs";
+        options = [ "subvol=@movies" ];
+      };
+
+      fileSystems."/media/music" = {
+        device = "/dev/disk/by-uuid/4ecbdc2f-bbd3-42f0-b18d-27a01a89c386";
+        fsType = "btrfs";
+        options = [ "subvol=@music" ];
+      };
+
+      fileSystems."/media/tv" = {
+        device = "/dev/disk/by-uuid/4ecbdc2f-bbd3-42f0-b18d-27a01a89c386";
+        fsType = "btrfs";
+        options = [ "subvol=@tv" ];
+      };
+
+      fileSystems."/media/manga" = {
+        device = "/dev/disk/by-uuid/4ecbdc2f-bbd3-42f0-b18d-27a01a89c386";
+        fsType = "btrfs";
+        options = [ "subvol=@manga" ];
+      };
+
       swapDevices = [
         { device = "/dev/disk/by-uuid/f88d472b-5732-43af-8583-0a13a2930cd1"; }
       ];
