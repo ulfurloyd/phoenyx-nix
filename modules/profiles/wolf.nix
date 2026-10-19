@@ -1,19 +1,4 @@
-{ self, inputs, ... }: {
-  flake.homeConfigurations.wolf = inputs.home-manager.lib.homeManagerConfiguration {
-    pkgs = import inputs.nixpkgs {
-      system = "x86_64-linux";
-      config.allowUnfree = true;
-    };
-
-    modules = [
-      self.homeModules.wolf
-      {
-        home.username = "wolf";
-        home.homeDirectory = "/home/wolf";
-      }
-    ];
-  };
-
+{ self, ... }: {
   flake.homeModules.wolf = { pkgs, ... }: {
     imports = [
       self.homeModules.bash
@@ -36,6 +21,7 @@
       mpv
       mpvpaper
       tre-command
+      bat
     ];
 
     programs.bash.enable = true;
