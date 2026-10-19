@@ -2,7 +2,7 @@
   flake.nixosModules.nyxConfiguration = { pkgs, ... }: {
     imports = [
       self.nixosModules.overlays
-      # self.nixosModules.hermesHardware
+      self.nixosModules.nyxHardware
       self.nixosModules.noctalia-greeter
       self.nixosModules.steam
     ];
@@ -38,6 +38,16 @@
       LC_PAPER = "en_IN";
       LC_TELEPHONE = "en_IN";
       LC_TIME = "en_IN";
+    };
+
+    services.openssh = {
+      enable = true;
+      openFirewall = true;
+      settings = {
+        PasswordAuthentication = false;
+        KbdInteractiveAuthentication = false;
+        PermitRootLogin = "no";
+      };
     };
 
     # kde
