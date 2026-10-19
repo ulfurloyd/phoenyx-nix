@@ -11,6 +11,7 @@
       tree = "tre -e automatic";
       cz = "chezmoi";
       k = "kubectl";
+      rb = "sudo nixos-rebuild switch --flake ~/Projects/phoenyxos/#$(hostname)";
 
       # git
       gs = "git status";
