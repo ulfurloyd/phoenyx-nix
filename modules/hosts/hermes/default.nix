@@ -9,6 +9,7 @@
       self.nixosModules.keyd
       self.nixosModules.flyline
       self.nixosModules.fonts
+      self.nixosModules.kdeconnect
     ];
   };
 }

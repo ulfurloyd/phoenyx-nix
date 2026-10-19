@@ -102,6 +102,7 @@
               "tray"
               "network"
               "bluetooth"
+              "phone-connect"
               "weather"
               "volume"
               "brightness"
@@ -179,6 +180,7 @@
           notifications.capsule = false;
           workspaces.show_labels = false;
           weather.show_condition = false;
+          phone-connect.type = "icefish/phone-connect:bar";
         };
         plugins = {
           enabled = [
@@ -188,6 +190,7 @@
             "noctalia/kaomoji"
             "noctalia/mpvpaper"
             "noctalia/bitwarden"
+            "icefish/phone-connect"
             "gustav0ar/drive-health"
             "tmelik/system-monitor"
             "noctalia/umbriel-companion"

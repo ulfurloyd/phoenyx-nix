@@ -11,6 +11,7 @@
       self.homeModules.zellij
       self.homeModules.shell-aliases
       self.homeModules.languages
+      self.homeModules.kdeconnect
     ];
 
     home.packages = with pkgs; [
@@ -22,6 +23,7 @@
       mpvpaper
       tre-command
       bat
+      glib
     ];
 
     programs.bash.enable = true;
