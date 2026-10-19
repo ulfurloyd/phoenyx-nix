@@ -4,6 +4,7 @@
       self.nixosModules.overlays
       self.nixosModules.hermesHardware
       self.nixosModules.noctalia-greeter
+      self.nixosModules.steam
     ];
 
     nix.settings.experimental-features = [

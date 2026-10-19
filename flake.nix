@@ -22,6 +22,7 @@
     flyline.url = "github:HalFrgrd/flyline";
 
     nvf.url = "github:notashelf/nvf";
+    millennium.url = "github:SteamClientHomebrew/Millennium?dir=packages/nix";
   };
 
   outputs = inputs: inputs.flake-parts.lib.mkFlake { inherit inputs; } (inputs.import-tree ./modules);
