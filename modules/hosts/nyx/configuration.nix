@@ -4,6 +4,7 @@
       self.nixosModules.overlays
       self.nixosModules.nyxHardware
       self.nixosModules.noctalia-greeter
+      self.nixosModules.k3s
       self.nixosModules.steam
     ];
 
