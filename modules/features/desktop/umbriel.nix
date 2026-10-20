@@ -80,6 +80,8 @@
           "Mod+Shift+I" = "window-move-to-workspace-previous";
           "Mod+Shift+H" = "column-move-left";
           "Mod+Shift+L" = "column-move-right";
+          "Mod+Ctrl+Shift+H" = "window-move-output-left";
+          "Mod+Ctrl+Shift+L" = "window-move-output-right";
           "Mod+H" = "window-focus-left";
           "Mod+J" = "window-focus-down";
           "Mod+K" = "window-focus-up";
