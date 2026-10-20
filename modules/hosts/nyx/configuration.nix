@@ -7,6 +7,8 @@
       self.nixosModules.k3s
       self.nixosModules.steam
       self.nixosModules.openssh
+      self.nixosModules.tailscale
+      self.nixosModules.nyxTailscale
     ];
 
     nix.settings.experimental-features = [

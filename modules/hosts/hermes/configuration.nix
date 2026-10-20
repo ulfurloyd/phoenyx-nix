@@ -6,6 +6,7 @@
       self.nixosModules.noctalia-greeter
       self.nixosModules.steam
       self.nixosModules.openssh
+      self.nixosModules.tailscale
     ];
 
     nix.settings.experimental-features = [
