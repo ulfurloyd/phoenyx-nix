@@ -81,5 +81,9 @@
     home.sessionPath = [
       "$HOME/go/bin"
     ];
+
+    home.sessionVariables = {
+      KUBECONFIG = "/home/wolf/.kube/config";
+    };
   };
 }
