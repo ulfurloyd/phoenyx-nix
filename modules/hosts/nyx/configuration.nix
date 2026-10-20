@@ -97,7 +97,12 @@
       xwayland-satellite
     ];
 
-    home-manager.users.wolf = self.homeModules.wolf;
+    home-manager.users.wolf = {
+      imports = [
+        self.homeModules.wolf
+        self.homeModules.nyxUmbriel
+      ];
+    };
 
     system.stateVersion = "26.05";
   };
