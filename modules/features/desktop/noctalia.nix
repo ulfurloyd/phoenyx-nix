@@ -99,14 +99,16 @@
           primary = {
             background_opacity = 0.5;
             end = [
+              "clock"
+              "date"
               "tray"
-              "network"
-              "bluetooth"
+              "recorder"
               "phone-connect"
               "weather"
               "volume"
-              "brightness"
-              "battery"
+            ];
+            center = [
+              "sys-summary"
             ];
             margin_ends = 10;
             position = "top";
@@ -115,6 +117,7 @@
             start = [
               "notifications"
               "workspaces"
+              "umbriel-companion"
               "active_window"
             ];
           };
@@ -182,6 +185,14 @@
           workspaces.show_labels = false;
           weather.show_condition = false;
           phone-connect.type = "icefish/phone-connect:bar";
+          umbriel-companion.type = "noctalia/umbriel-companion:bar";
+          sys-summary = {
+            show_gpu_temperature = "off";
+            show_gpu_usage = "off";
+            show_gpu_vram = "off";
+            show_swap = false;
+            type = "tmelik/system-monitor:summary";
+          };
         };
         plugins = {
           enabled = [
