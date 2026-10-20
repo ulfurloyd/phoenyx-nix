@@ -12,6 +12,7 @@
       self.homeModules.shell-aliases
       self.homeModules.languages
       self.homeModules.kdeconnect
+      self.homeModules.k9s
     ];
 
     home.packages = with pkgs; [
