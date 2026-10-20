@@ -5,6 +5,7 @@
       self.nixosModules.hermesHardware
       self.nixosModules.noctalia-greeter
       self.nixosModules.steam
+      self.nixosModules.openssh
     ];
 
     nix.settings.experimental-features = [

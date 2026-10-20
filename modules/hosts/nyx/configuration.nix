@@ -6,6 +6,7 @@
       self.nixosModules.noctalia-greeter
       self.nixosModules.k3s
       self.nixosModules.steam
+      self.nixosModules.openssh
     ];
 
     nix.settings.experimental-features = [
@@ -39,16 +40,6 @@
       LC_PAPER = "en_IN";
       LC_TELEPHONE = "en_IN";
       LC_TIME = "en_IN";
-    };
-
-    services.openssh = {
-      enable = true;
-      openFirewall = true;
-      settings = {
-        PasswordAuthentication = false;
-        KbdInteractiveAuthentication = false;
-        PermitRootLogin = "no";
-      };
     };
 
     # kde
