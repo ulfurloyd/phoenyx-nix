@@ -7,6 +7,7 @@
       self.homeModules.kitty
       self.homeModules.vesktop
       self.homeModules.nvim
+      self.homeModules.git
       self.homeModules.lazygit
       self.homeModules.zellij
       self.homeModules.shell-aliases
