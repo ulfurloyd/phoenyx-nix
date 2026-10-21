@@ -14,6 +14,7 @@
       self.homeModules.kdeconnect
       self.homeModules.k9s
       self.homeModules.ssh
+      self.homeModules.devenv
     ];
 
     home.packages = with pkgs; [
