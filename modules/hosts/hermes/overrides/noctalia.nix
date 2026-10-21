@@ -1,8 +1,8 @@
-{ ... }: {
+{ lib, ... }: {
   flake.homeModules.hermesNoctalia = {
     programs.noctalia.settings = {
       bar.primary = {
-        end = [
+        end = lib.mkForce [
           "clock"
           "date"
           "tray"
@@ -17,7 +17,7 @@
           "battery"
         ];
       };
-      plugin_settings."mindnbytes/nix-status".nixos_configuration = "hermes";
+      plugin_settings."mindnbytes/nix-status".nixos_configuration = lib.mkForce "hermes";
     };
   };
 }
