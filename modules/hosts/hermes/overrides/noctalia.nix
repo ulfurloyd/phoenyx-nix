@@ -4,7 +4,6 @@
       bar.primary = {
         end = lib.mkForce [
           "clock"
-          "date"
           "tray"
           "nix-status"
           "network"
@@ -13,7 +12,6 @@
           "phone-connect"
           "weather"
           "volume"
-          "brightness"
           "battery"
         ];
       };
