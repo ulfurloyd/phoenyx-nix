@@ -5,6 +5,7 @@
         "clock"
         "date"
         "tray"
+        "nix-status"
         "network"
         "bluetooth"
         "recorder"

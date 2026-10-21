@@ -102,6 +102,7 @@
               "clock"
               "date"
               "tray"
+              "nix-status"
               "recorder"
               "phone-connect"
               "weather"
@@ -186,6 +187,7 @@
           weather.show_condition = false;
           phone-connect.type = "icefish/phone-connect:bar";
           umbriel-companion.type = "noctalia/umbriel-companion:bar";
+          nix-status.type = "mindnbytes/nix-status:status";
           sys-summary = {
             show_gpu_temperature = "off";
             show_gpu_usage = "off";
@@ -206,9 +208,13 @@
             "gustav0ar/drive-health"
             "tmelik/system-monitor"
             "noctalia/umbriel-companion"
+            "mindnbytes/nix-status"
           ];
           settings = {
             "noctalia/bitwarden".server_url = "https://vaultwarden.phoenyxlab.xyz";
+            "mindnbytes/nix-status" = {
+              flake_dir = "/home/wolf/Projects/phoenyxos";
+            };
           };
         };
       };
