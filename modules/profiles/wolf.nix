@@ -13,6 +13,7 @@
       self.homeModules.languages
       self.homeModules.kdeconnect
       self.homeModules.k9s
+      self.homeModules.ssh
     ];
 
     home.packages = with pkgs; [
