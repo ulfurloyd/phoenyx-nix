@@ -30,6 +30,7 @@
           width = 900;
         };
         dock.enabled = false;
+        wallpaper.directory = "/home/wolf/Wallpapers";
         keybinds = {
           cancel = [
             "Escape"
@@ -210,11 +211,12 @@
             "noctalia/umbriel-companion"
             "mindnbytes/nix-status"
           ];
-          settings = {
-            "noctalia/bitwarden".server_url = "https://vaultwarden.phoenyxlab.xyz";
-            "mindnbytes/nix-status" = {
-              flake_dir = "/home/wolf/Projects/phoenyxos";
-            };
+        };
+        plugin_settings = {
+          "noctalia/bitwarden".server_url = "https://vaultwarden.phoenyxlab.xyz";
+          "mindnbytes/nix-status" = {
+            flake_dir = "/home/wolf/Projects/phoenyxos";
+            nixos_configuration = "nyx";
           };
         };
       };
