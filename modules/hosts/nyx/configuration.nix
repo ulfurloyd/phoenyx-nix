@@ -17,12 +17,20 @@
     ];
 
     # boot
-    boot.loader.systemd-boot = {
-      enable = true;
-      configurationLimit = 10;
+    boot = {
+      loader = {
+        systemd-boot = {
+          enable = true;
+          configurationLimit = 10;
+        };
+        efi.canTouchEfiVariables = true;
+      };
+      kernelPackages = pkgs.linuxPackages_latest;
+      extraModprobeConfig = ''
+        options snd_hda_intel power_save=0
+        options snd_hda_intel power_save_controller=N
+      '';
     };
-    boot.loader.efi.canTouchEfiVariables = true;
-    boot.kernelPackages = pkgs.linuxPackages_latest;
 
     # networking
     networking.hostName = "nyx";
