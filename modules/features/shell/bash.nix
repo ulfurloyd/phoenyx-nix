@@ -36,9 +36,6 @@
         # fzf integration
         eval "$(fzf --bash)"
 
-        # devenv integration
-        eval "$(devenv hook bash)"
-
         # Flyline's fzf directory integration
         function flyline_fzf_cd() {
           local cmd
