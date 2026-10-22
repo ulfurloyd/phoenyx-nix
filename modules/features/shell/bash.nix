@@ -24,15 +24,6 @@
       ];
 
       initExtra = ''
-        function y() {
-          local tmp cwd
-          tmp="$(mktemp -t "yazi-cwd.XXXXXX")"
-          command yazi "$@" --cwd-file="$tmp"
-          IFS= read -r -d $'\0' cwd <"$tmp"
-          [ "$cwd" != "$PWD" ] && [ -d "$cwd" ] && builtin cd -- "$cwd" || builtin true
-          command rm -f -- "$tmp"
-        }
-
         # fzf integration
         eval "$(fzf --bash)"
 

@@ -16,6 +16,7 @@
       self.homeModules.k9s
       self.homeModules.ssh
       self.homeModules.devenv
+      self.homeModules.yazi
     ];
 
     home.packages = with pkgs; [
