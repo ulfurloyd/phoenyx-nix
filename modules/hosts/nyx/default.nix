@@ -4,6 +4,7 @@
     modules = with self.nixosModules; [
       nyxConfiguration
       systemConfiguration
+      nvidia
     ];
   };
 }
