@@ -2,7 +2,7 @@
   flake.nixosModules.nh = { ... }: {
     programs.nh = {
       enable = true;
-      flake = "~/Projects/phoenyxos";
+      flake = "/home/wolf/Projects/phoenyxos";
     };
   };
 }
