@@ -75,6 +75,7 @@
     ];
 
     home.sessionVariables = {
+      EDITOR = "nvim";
       KUBECONFIG = "/home/wolf/.kube/config";
     };
   };
