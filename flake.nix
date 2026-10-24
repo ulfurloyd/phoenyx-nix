@@ -23,6 +23,10 @@
 
     nvf.url = "github:notashelf/nvf";
     millennium.url = "github:SteamClientHomebrew/Millennium?dir=packages/nix";
+    openmw-nix = {
+      url = "git+https://codeberg.org/PopeRigby/openmw-nix.git";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = inputs: inputs.flake-parts.lib.mkFlake { inherit inputs; } (inputs.import-tree ./modules);

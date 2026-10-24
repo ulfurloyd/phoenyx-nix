@@ -5,6 +5,7 @@
       nyxConfiguration
       systemConfiguration
       nvidia
+      openmw
     ];
   };
 }
