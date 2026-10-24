@@ -17,6 +17,7 @@
       self.homeModules.ssh
       self.homeModules.devenv
       self.homeModules.yazi
+      self.homeModules.mo2-lint
     ];
 
     home.packages = with pkgs; [
@@ -29,7 +30,6 @@
       tre-command
       bat
       glib
-      mo2-lint
     ];
 
     programs.btop.enable = true;
