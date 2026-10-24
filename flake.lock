@@ -238,6 +238,24 @@
         "type": "github"
       }
     },
+    "mo2-lint": {
+      "inputs": {
+        "nixpkgs": "nixpkgs_3"
+      },
+      "locked": {
+        "lastModified": 1792840184,
+        "narHash": "sha256-1Tg+xIDCwpW4O4DJKQKbJav1nzPc5kac9FJ0zk8mrw8=",
+        "owner": "ulfurloyd",
+        "repo": "mo2-lint-flake",
+        "rev": "adb262d228a4b39decd85e1d7490f955531972a9",
+        "type": "github"
+      },
+      "original": {
+        "owner": "ulfurloyd",
+        "repo": "mo2-lint-flake",
+        "type": "github"
+      }
+    },
     "mygui": {
       "locked": {
         "lastModified": 1716480759,
@@ -332,6 +350,22 @@
     },
     "nixpkgs_3": {
       "locked": {
+        "lastModified": 1792210252,
+        "narHash": "sha256-Mh0PUaIv4nFY+8wAGonaEh8iBzwsmdNlwjVHmFg1Biw=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "09063bd1f2b36fd9fd793c36dfade7bd40a93dfc",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "nixos-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "nixpkgs_4": {
+      "locked": {
         "lastModified": 1792502884,
         "narHash": "sha256-IoNisKcGbUjdd45qCqywGMCYmZ5EnkxezvLII0FWwNA=",
         "owner": "nixos",
@@ -346,7 +380,7 @@
         "type": "github"
       }
     },
-    "nixpkgs_4": {
+    "nixpkgs_5": {
       "locked": {
         "lastModified": 1792094642,
         "narHash": "sha256-LPFRbrCWWyNsdQLO3SX1B/5UMkFK0hfe7bZR6lENvpc=",
@@ -359,7 +393,7 @@
         "url": "https://channels.nixos.org/nixos-unstable/nixexprs.tar.zst"
       }
     },
-    "nixpkgs_5": {
+    "nixpkgs_6": {
       "locked": {
         "lastModified": 1790046670,
         "narHash": "sha256-OJe62m8gZx4xEAQnMcqH1u31/uu4Xf0q2ykAEHZfgrg=",
@@ -372,7 +406,7 @@
         "url": "https://channels.nixos.org/nixos-unstable/nixexprs.tar.xz"
       }
     },
-    "nixpkgs_6": {
+    "nixpkgs_7": {
       "locked": {
         "lastModified": 1792094642,
         "narHash": "sha256-LPFRbrCWWyNsdQLO3SX1B/5UMkFK0hfe7bZR6lENvpc=",
@@ -385,7 +419,7 @@
         "url": "https://channels.nixos.org/nixos-unstable/nixexprs.tar.xz"
       }
     },
-    "nixpkgs_7": {
+    "nixpkgs_8": {
       "locked": {
         "lastModified": 1791966044,
         "narHash": "sha256-t1hT8UW97rFCWCJO7/pClvu0AhLN5V3uir2M0ic4w/Q=",
@@ -403,7 +437,7 @@
     },
     "noctalia": {
       "inputs": {
-        "nixpkgs": "nixpkgs_4"
+        "nixpkgs": "nixpkgs_5"
       },
       "locked": {
         "lastModified": 1792571353,
@@ -423,7 +457,7 @@
       "inputs": {
         "flake-compat": "flake-compat",
         "mnw": "mnw",
-        "nixpkgs": "nixpkgs_5"
+        "nixpkgs": "nixpkgs_6"
       },
       "locked": {
         "lastModified": 1792450766,
@@ -470,7 +504,8 @@
         "home-manager": "home-manager",
         "import-tree": "import-tree",
         "millennium": "millennium",
-        "nixpkgs": "nixpkgs_3",
+        "mo2-lint": "mo2-lint",
+        "nixpkgs": "nixpkgs_4",
         "noctalia": "noctalia",
         "nvf": "nvf",
         "openmw-nix": "openmw-nix",
@@ -550,7 +585,7 @@
     },
     "umbriel": {
       "inputs": {
-        "nixpkgs": "nixpkgs_6",
+        "nixpkgs": "nixpkgs_7",
         "xdg-desktop-portal-umbriel": "xdg-desktop-portal-umbriel"
       },
       "locked": {
@@ -587,7 +622,7 @@
     },
     "wrapper-modules": {
       "inputs": {
-        "nixpkgs": "nixpkgs_7"
+        "nixpkgs": "nixpkgs_8"
       },
       "locked": {
         "lastModified": 1792532408,

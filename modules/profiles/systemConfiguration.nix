@@ -1,5 +1,5 @@
 { self, ... }: {
-  flake.nixosModules.systemConfiguration = { ... }: {
+  flake.nixosModules.systemConfiguration = { pkgs, ... }: {
     imports = with self.nixosModules; [
       myHomeManager
       umbriel
@@ -9,6 +9,11 @@
       fonts
       kdeconnect
       nh
+    ];
+    environment.systemPackages = with pkgs; [
+      vim
+      wget
+      xwayland-satellite
     ];
   };
 }

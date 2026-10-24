@@ -27,6 +27,8 @@
       url = "git+https://codeberg.org/PopeRigby/openmw-nix.git";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    mo2-lint.url = "github:ulfurloyd/mo2-lint-flake";
   };
 
   outputs = inputs: inputs.flake-parts.lib.mkFlake { inherit inputs; } (inputs.import-tree ./modules);

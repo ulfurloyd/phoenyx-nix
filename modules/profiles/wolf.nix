@@ -29,6 +29,7 @@
       tre-command
       bat
       glib
+      mo2-lint
     ];
 
     programs.btop.enable = true;
