@@ -6,15 +6,7 @@
 
     programs.mo2-lint = {
       enable = true;
-
-      settings.instance = {
-        launcher = "steam";
-        theme = "paper-dark";
-        plugins = [
-          "root-builder"
-          "auto-activator"
-        ];
-      };
+      settings.instance.launcher = "steam";
     };
   };
 }
